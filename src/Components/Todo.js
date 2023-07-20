@@ -19,7 +19,7 @@ const Todo = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 bg-gray-100"> {/* Add bg-gray-100 class */}
       <h1 className="text-3xl font-bold mb-4">Todo List</h1>
       <div className="flex mb-4">
         <input
