@@ -8,7 +8,8 @@ const App = () => {
   return (
     <div>
       {/* <Todo /> */}
-      <SimpleState />
+       <SimpleState />
+       <SimpleState />
       {/* <Samplestate /> */}
     </div>
   );
