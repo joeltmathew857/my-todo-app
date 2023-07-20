@@ -1,10 +1,13 @@
-import './App.css';
+// src/App.js
+import React from 'react';
+import Todo from './Todo'; // Check the import path and letter casing
 
-export default function App() {
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
+    <div>
+      <Todo />
+    </div>
+  );
+};
 
+export default App;
