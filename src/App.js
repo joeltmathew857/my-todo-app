@@ -7,10 +7,9 @@ import Samplestate from './Components/Samplestate'
 const App = () => {
   return (
     <div>
-      {/* <Todo /> */}
+      {/* <Todo />  */}
        <SimpleState />
-       <SimpleState />
-      {/* <Samplestate /> */}
+       {/* <Samplestate /> */}
     </div>
   );
 };
