@@ -34,11 +34,11 @@ const SimpleStateExample = () => {
       <div className="flex items-center mb-4">
         <button className="px-4 py-2 bg-blue-500 text-white rounded mr-2" onClick={decrementCount}>-</button>
 
-          <h2 className="text-2xl font-bold">{count}</h2><button className="px-4 py-2 bg-blue-500 text-white rounded ml-2" onClick={incrementCount}>+</button></div>
+          <h2 className="text-2xl font-bold">{count}</h2>
+          <button className="px-4 py-2 bg-blue-500 text-white rounded ml-2" onClick={incrementCount}>+</button></div>
 
-   
       <div className="flex items-center">
-        
+
       <input type="number" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="px-4 py-2 border border-gray-300 rounded-l focus:outline-none focus:ring focus:border-blue-500" placeholder="Set starting value" />
 
      <button className="px-4 py-2 bg-blue-500 text-white rounded-r ml-2" onClick={handleSetStartingValue}>Set</button>

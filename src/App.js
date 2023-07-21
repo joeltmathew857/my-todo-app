@@ -9,7 +9,7 @@ const App = () => {
     <div>
       {/* <Todo />  */}
        <SimpleState />
-       {/* <Samplestate /> */}
+       <Samplestate />
     </div>
   );
 };
