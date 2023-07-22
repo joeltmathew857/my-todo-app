@@ -1,23 +1,11 @@
-// src/App.js
-import React, { useState } from 'react';
-import Greeting from './Components/Greeting';
+import React from 'react';
+import TodoList from './Components/Greeting';
 
 const App = () => {
-  const [userName, setUserName] = useState('John');
-  const [showGreeting, setShowGreeting] = useState(true);
-
-  const handleButtonClick = () => {
-    setShowGreeting(!showGreeting);
-  };
-
   return (
-    <div>
-      <h1>Hello, World!</h1>
-      <p>This is my first React application.</p>
-      {showGreeting && <Greeting name={userName} />}
-      <button onClick={handleButtonClick}>
-        {showGreeting ? 'Hide Greeting' : 'Show Greeting'}
-      </button>
+    <div className="container mx-auto p-4">
+      <h1 className="text-4xl font-bold mb-6 text-indigo-800 w-full text-center">Todo List App</h1>
+      <TodoList />
     </div>
   );
 };
