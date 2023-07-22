@@ -1,15 +1,23 @@
 // src/App.js
-import React from "react";
-import SimpleState from "./Components/SimpleState";
-import Samplestate from "./Components/Samplestate";
-import SearchItem from "./Components/SearchItem";
+import React, { useState } from 'react';
+import Greeting from './Components/Greeting';
 
 const App = () => {
+  const [userName, setUserName] = useState('John');
+  const [showGreeting, setShowGreeting] = useState(true);
+
+  const handleButtonClick = () => {
+    setShowGreeting(!showGreeting);
+  };
+
   return (
     <div>
-      <SimpleState />
-      <Samplestate />
-      <SearchItem />
+      <h1>Hello, World!</h1>
+      <p>This is my first React application.</p>
+      {showGreeting && <Greeting name={userName} />}
+      <button onClick={handleButtonClick}>
+        {showGreeting ? 'Hide Greeting' : 'Show Greeting'}
+      </button>
     </div>
   );
 };
