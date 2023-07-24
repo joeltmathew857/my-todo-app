@@ -23,8 +23,23 @@ const MyForm = () => {
     setFormData(initialState);
   };
 
+  const [isMouseOver, setIsMouseOver] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsMouseOver(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsMouseOver(false);
+  };
+
   return (
-    <form className="p-4 border rounded" onSubmit={handleSubmit}>
+    <form
+      className={`p-4 border rounded ${isMouseOver ? 'bg-blue-100' : ''}`}
+      onSubmit={handleSubmit}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
       <div className="mb-2">
         <label htmlFor="name" className="block">Name:</label>
         <input
