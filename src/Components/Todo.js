@@ -1,33 +1,25 @@
 import React, { useState } from 'react';
 
 const TodoList = () => {
-  // State to store the list of items
   const [items, setItems] = useState([]);
-  
-  // State to store the input value
   const [inputValue, setInputValue] = useState('');
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Add the new item to the list
     setItems([...items, inputValue]);
-
-    // Clear the input field
     setInputValue('');
   };
 
   return (
-    <div>
+    <div className="p-4">
       <h2 className="text-xl font-semibold mb-4">Todo List</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Enter a new item"
-          className="border p-2 mr-2"
+          className="border p-2 mr-2 flex-grow"
         />
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
           Add Item
